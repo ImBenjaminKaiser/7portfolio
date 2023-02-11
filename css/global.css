@@ -9,7 +9,7 @@
   --darkgrey: #313131;
   --orangeyellow: rgba(253, 195, 45, 1);
   --babyblue: #85e5fa;
-  --lightergrey:#363636;
+  --lightergrey: #363636;
 }
 /* sets the font of everything to the one I Imported */
 * {
@@ -130,8 +130,44 @@ body {
   width: 100%;
 }
 
-.dummytext{
+.dummytext {
   color: aliceblue;
   font-size: 1.5vw;
   margin: 50px 300px 50px 300px;
+}
+
+.quality1,
+.quality2,
+.quality3,
+.quality4,
+.quality5 {
+  height: 500px;
+  background-color: #313131;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 50%;
+  height: 700px;
+}
+
+.quality1-img,
+.quality2-img,
+.quality3-img,
+.quality4-img,
+.quality5-img {
+  float: left;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+}
+
+.quality1-text,
+.quality2-text,
+.quality3-text,
+.quality4-text,
+.quality5-text {
+  float: left;
+  color: aliceblue;
+  width: 50px;
+  height: 50px;
 }

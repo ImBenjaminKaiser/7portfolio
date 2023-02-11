@@ -20,7 +20,7 @@ tl.from(".me",{
   // opacity:0,
   duration:2,
   ease: "power3.inOut",
-})
+}, ">-0.7")//start 0.7 sec before previous animation ends
 
 tl.from(".hellomynameis", {
   y:-100, 
