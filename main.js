@@ -49,5 +49,5 @@ tl.from(".intro", {
   y:50, 
   opacity:0, 
   delay:0.5, 
-  duration:0.8
+  duration:0.8,
 })
