@@ -9,7 +9,7 @@
   --darkgrey: #313131;
   --orangeyellow: rgba(253, 195, 45, 1);
   --babyblue: #85e5fa;
-  --lightergrey: #363636;
+  --lightergrey:#363636;
 }
 /* sets the font of everything to the one I Imported */
 * {
@@ -130,10 +130,11 @@ body {
   width: 100%;
 }
 
-.dummytext {
+.dummytext{
   color: aliceblue;
   font-size: 1.5vw;
   margin: 50px 300px 50px 300px;
+<<<<<<< HEAD
 }
 
 .quality1,
@@ -189,4 +190,6 @@ justify-content: center;
 font-weight: bold;
 font-size: 50px;
 color: aliceblue;
+=======
+>>>>>>> parent of 2848742 (start of making 5 qualities)
 }
