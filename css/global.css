@@ -9,6 +9,7 @@
   --darkgrey: #313131;
   --orangeyellow: rgba(253, 195, 45, 1);
   --babyblue: #85e5fa;
+  --lightergrey:#363636;
 }
 /* sets the font of everything to the one I Imported */
 * {
@@ -122,3 +123,15 @@ body {
   padding-right: 30px;
 }
 
+.qualities {
+  position: absolute;
+  top: 100vh;
+  background-color: var(--lightergrey);
+  width: 100%;
+}
+
+.dummytext{
+  color: aliceblue;
+  font-size: 1.5vw;
+  margin: 50px 300px 50px 300px;
+}
