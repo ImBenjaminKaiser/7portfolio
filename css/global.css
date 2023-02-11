@@ -9,7 +9,7 @@
   --darkgrey: #313131;
   --orangeyellow: rgba(253, 195, 45, 1);
   --babyblue: #85e5fa;
-  --lightergrey:#363636;
+  --lightergrey: #363636;
 }
 /* sets the font of everything to the one I Imported */
 * {
@@ -130,11 +130,10 @@ body {
   width: 100%;
 }
 
-.dummytext{
+.dummytext {
   color: aliceblue;
   font-size: 1.5vw;
   margin: 50px 300px 50px 300px;
-<<<<<<< HEAD
 }
 
 .quality1,
@@ -155,15 +154,15 @@ body {
 .quality3-img,
 .quality5-img {
   float: left;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 }
 
 .quality2-img,
 .quality4-img {
   float: right;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 }
 
 .quality1-text,
@@ -171,25 +170,33 @@ body {
 .quality5-text {
   float: right;
   color: aliceblue;
-  width: 500px;
+  width: 350px;
   height: auto;
 }
 .quality2-text,
 .quality4-text {
   float: left;
   color: aliceblue;
-  width: 500px;
+  width: 350px;
   height: auto;
-  display: grid;
-  align-items: center;
 }
 
-.quality1-name,.quality2-name,.quality3-name,.quality4-name,.quality5-name{
-display: flex;
-justify-content: center;
-font-weight: bold;
-font-size: 50px;
-color: aliceblue;
-=======
->>>>>>> parent of 2848742 (start of making 5 qualities)
+.quality1-name,
+.quality2-name,
+.quality3-name,
+.quality4-name,
+.quality5-name {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 50px;
+  color: aliceblue;
+}
+
+.quality1,
+.quality2,
+.quality3,
+.quality4,
+.quality5 {
+  padding: 80px 50px 0px 50px;
 }
