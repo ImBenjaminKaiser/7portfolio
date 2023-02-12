@@ -170,15 +170,17 @@ body {
 .quality5-text {
   float: right;
   color: aliceblue;
-  width: 350px;
+  width: 500px;
   height: auto;
+  font-size: 50px;
 }
 .quality2-text,
 .quality4-text {
   float: left;
   color: aliceblue;
-  width: 350px;
+  width: 500px;
   height: auto;
+  font-size: 50px;
 }
 
 .quality1-name,
@@ -189,7 +191,7 @@ body {
   display: flex;
   justify-content: center;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 75px;
   color: aliceblue;
 }
 
@@ -199,4 +201,10 @@ body {
 .quality4,
 .quality5 {
   padding: 80px 50px 0px 50px;
+}
+.thefivequalities {
+  color: aliceblue;
+  text-align: center;
+  margin-top: 80px;
+  font-size: 100px;
 }
