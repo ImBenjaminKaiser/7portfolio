@@ -1,17 +1,19 @@
 gsap.registerPlugin(ScrollTrigger);
 var tl = gsap.timeline({});
 tl.set("li",{
-  y:-1000,
+  y:-50,
   scale:0.75,
 })
 
 tl.to("li", {
   y:1.5,
-  stagger:-0.1
+  stagger:-0.1,
+  ease: "power3.inOut",
 })
 tl.to("li", {
   scale:1,
   stagger:-0.2,
+  ease: "power3.inOut",
 })
 
 
@@ -61,29 +63,54 @@ gsap.set(".dummytext", {
   overwrite: 'auto',
 });
 
-// ScrollTrigger.create({
-//   trigger: ".dummytext",
-//   start: 'top 60%',
-//   end: 'bottom 30%',
-//   markers: true,
-//   onEnter: () => gsap.to(".dummytext", {
-//     y: 0,
-//     opacity: 1,
-//     // stagger: 0.2,
-//   }),
-//   onLeave: () => gsap.to(".dummytext", {
-//     y: -50,
-//     opacity: 0,
-//     // stagger: 0.2,
-//   }),
-//   onEnterBack: () => gsap.to(".dummytext", {
-//     y: 0,
-//     opacity: 1,
-//     // stagger: -0.2,
-//   }),
-//   onLeaveBack: () => gsap.to(".dummytext", {
-//     y: 50,
-//     opacity: 0,
-//     // stagger: -0.2,
-//   }),
-// })
+// following code "adapted" from https://codepen.io/DariaIvK/pen/RwrBvaW
+ScrollTrigger.create({
+  trigger: ".quality1",
+  start: 'top 60%',
+  end: 'bottom 30%',
+  markers: true,
+  onEnter: () => gsap.to(".quality1", {y: 0,opacity: 1,}),
+  onLeave: () => gsap.to(".quality1", {y: -50,opacity: 0,}),
+  onEnterBack: () => gsap.to(".quality1", {y: 0,opacity: 1,}),
+  onLeaveBack: () => gsap.to(".quality1", {y: 50,opacity: 0,}),
+})
+ScrollTrigger.create({
+  trigger: ".quality2",
+  start: 'top 60%',
+  end: 'bottom 30%',
+  markers: true,
+  onEnter: () => gsap.to(".quality2", {y: 0,opacity: 1,}),
+  onLeave: () => gsap.to(".quality2", {y: -50,opacity: 0,}),
+  onEnterBack: () => gsap.to(".quality2", {y: 0,opacity: 1,}),
+  onLeaveBack: () => gsap.to(".quality2", {y: 50,opacity: 0,}),
+})
+ScrollTrigger.create({
+  trigger: ".quality3",
+  start: 'top 60%',
+  end: 'bottom 30%',
+  markers: true,
+  onEnter: () => gsap.to(".quality3", {y: 0,opacity: 1,}),
+  onLeave: () => gsap.to(".quality3", {y: -50,opacity: 0,}),
+  onEnterBack: () => gsap.to(".quality3", {y: 0,opacity: 1,}),
+  onLeaveBack: () => gsap.to(".quality3", {y: 50,opacity: 0,}),
+})
+ScrollTrigger.create({
+  trigger: ".quality4",
+  start: 'top 60%',
+  end: 'bottom 30%',
+  markers: true,
+  onEnter: () => gsap.to(".quality4", {y: 0,opacity: 1,}),
+  onLeave: () => gsap.to(".quality4", {y: -50,opacity: 0,}),
+  onEnterBack: () => gsap.to(".quality4", {y: 0,opacity: 1,}),
+  onLeaveBack: () => gsap.to(".quality4", {y: 50,opacity: 0,}),
+})
+ScrollTrigger.create({
+  trigger: ".quality5",
+  start: 'top 60%',
+  end: 'bottom 30%',
+  markers: true,
+  onEnter: () => gsap.to(".quality5", {y: 0,opacity: 1,}),
+  onLeave: () => gsap.to(".quality5", {y: -50,opacity: 0,}),
+  onEnterBack: () => gsap.to(".quality5", {y: 0,opacity: 1,}),
+  onLeaveBack: () => gsap.to(".quality5", {y: 50,opacity: 0,}),
+})
