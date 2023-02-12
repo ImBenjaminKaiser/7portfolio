@@ -10,6 +10,10 @@
   --orangeyellow: rgba(253, 195, 45, 1);
   --babyblue: #85e5fa;
   --lightergrey: #363636;
+  --blue: #0047ba;
+  --green: #007d69;
+  --yellow: #f7d117;
+  --red: #e71e39;
 }
 /* sets the font of everything to the one I Imported */
 * {
@@ -91,7 +95,7 @@ body {
   font-weight: bold;
   float: left;
   color: aliceblue;
-  width: 25vw;
+  width: 26vw;
   font-size: 1.5vw;
 }
 .mynameis {
@@ -128,12 +132,6 @@ body {
   top: 100vh;
   background-color: var(--lightergrey);
   width: 100%;
-}
-
-.dummytext {
-  color: aliceblue;
-  font-size: 1.5vw;
-  margin: 50px 300px 50px 300px;
 }
 
 .quality1,
@@ -207,4 +205,48 @@ body {
   text-align: center;
   margin-top: 80px;
   font-size: 100px;
+}
+
+.benjamin,
+.kaiser,
+.hello,
+.mynameis {
+  display: inline-block;
+}
+
+.char {
+  transform: translateY(115px);
+  -webkit-transform: translateY(115px);
+  -moz-transform: translateY(115px);
+  -ms-transform: translateY(115px);
+  -o-transform: translateY(115px);
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+.benjamin,
+.kaiser {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.blue {
+  color: var(--blue);
+  display: inline-block;
+  margin-right: -7px;
+}
+.yellow {
+  color: var(--yellow);
+  display: inline-block;
+  margin-right: -7px;
+}
+.green {
+  color: var(--green);
+  display: inline-block;
+  margin-right: -7px;
+}
+.red {
+  color: var(--red);
+  display: inline-block;
+  margin-right: -7px;
 }

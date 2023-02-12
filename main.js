@@ -1,83 +1,111 @@
-// This code registers the ScrollTrigger plugin with the GSAP library, allowing the user to create scroll-based animations with GSAP.
-gsap.registerPlugin(ScrollTrigger);
-// This code creates a timeline object using the GreenSock Animation Platform (GSAP) library. The timeline object can be used to create and control animations.
+var splitBenjamin = new SplitType(".benjamin")
+var splitKaiser = new SplitType(".kaiser")
+
+// const helloss = henskj
+// // This code registers the ScrollTrigger plugin with the GSAP library, allowing the user to create scroll-based animations with GSAP.
+gsap.registerPlugin("ScrollTrigger");
+// // This code creates a timeline object using the GreenSock Animation Platform (GSAP) library. The timeline object can be used to create and control animations.
 var tl = gsap.timeline({});
-// This code sets the y position of the element with the id "li" to -50 and the scale to 0.75.
-// tl.set("li",{
-//   y:-50,
-//   scale:0.75,
-// })
 
-
-// This code creates a timeline (tl) which animates each list item (li) from an x
-//  position of -3000 to its original position, with a staggered delay of 0.1
-//   seconds between each item, and an easing effect of "power3.inOut".
+// // This code creates a timeline (tl) which animates each list item (li) from an x
+// //  position of -3000 to its original position, with a staggered delay of 0.1
+// //   seconds between each item, and an easing effect of "power3.inOut".
 tl.from("li", {
   x:-3000,
   stagger:-0.1,
   ease: "power3.inOut",
 })
 
-// This code creates a timeline (tl) and animates the element with the class
-//  "me" from an x position of 1000 to its original position
-//  over a duration of 2 seconds using a power3.inOut easing.
+// // This code creates a timeline (tl) and animates the element with the class
+// //  "me" from an x position of 1000 to its original position
+// //  over a duration of 2 seconds using a power3.inOut easing.
 tl.from(".me",{
-  x:1000,
-  // opacity:0,
+  y:1000,
+  opacity:0,
   duration:2,
   ease: "power3.inOut",
+  // scale:0.5,
 })
 
-// This code creates an animation that moves the element with the class
-// "hellomynameis" from its current position to a position 100px above it, fades
-//  it in, and scales it up, all over a duration of 0.6 seconds, with a delay of 0.5 seconds.
-tl.from(".hellomynameis", {
+// // This code creates an animation that moves the element with the class
+// // "hellomynameis" from its current position to a position 100px above it, fades
+// //  it in, and scales it up, all over a duration of 0.6 seconds, with a delay of 0.5 seconds.
+tl.from(".hello", {
   y:-100,
   opacity:0,
   scale:0,
   delay:0.5,
   duration:0.6,
 })
-
-// This code creates a timeline (tl) and animates the element with
-// the class "benjamin" from an opacity of 0 to an opacity of 1, and from
-// a vertical position of 100px to its original position, over a duration
-// of 0.6 seconds, using a power3.inOut easing.
-tl.from(".benjamin", {
+tl.from(".mynameis", {
+  y:-100,
   opacity:0,
-  y:100,
+  scale:0,
+  delay:0.5,
   duration:0.6,
-  ease: "power3.inOut",
+}, "<")
+
+
+
+// // This code creates a timeline (tl) and animates the element with
+// // the class "benjamin" from an opacity of 0 to an opacity of 1, and from
+// // a vertical position of 100px to its original position, over a duration
+// // of 0.6 seconds, using a power3.inOut easing.
+// tl.from(".benjamin", {
+//   opacity:0,
+//   y:100,
+//   duration:0.6,
+//   ease: "power3.inOut",
+// })
+
+// // This code creates a timeline (tl) which animates the element with the class
+// // "kaiser" from an opacity of 0 to full opacity, moves it 100px up from its original positi
+// // on, and takes 0.6 seconds to complete the animation
+// // with a power3.inOut easing effect and a delay of 0.2 seconds.
+// tl.from(".kaiser", {
+//   opacity:0,
+//   y:100,
+//   duration:0.6,
+//   ease: "power3.inOut",
+//   delay:0.2,
+// })
+
+
+
+tl.to(".char",{
+  y:0,
+  stagger:.05,
+  duration:.1,
 })
 
-// This code creates a timeline (tl) which animates the element with the class
-// "kaiser" from an opacity of 0 to full opacity, moves it 100px up from its original positi
-// on, and takes 0.6 seconds to complete the animation
-// with a power3.inOut easing effect and a delay of 0.2 seconds.
-tl.from(".kaiser", {
-  opacity:0,
-  y:100,
-  duration:0.6,
-  ease: "power3.inOut",
-  delay:0.2,
-})
 
-// This code creates a timeline (tl) which animates the element wi
-// th the class "intro" from a y-position of 50, an opacity of 0,
-// with a delay of 0.5 seconds and a duration of 0.8 seconds.
+
+
+
+
+
+
+
+
+
+
+// // This code creates a timeline (tl) which animates the element wi
+// // th the class "intro" from a y-position of 50, an opacity of 0,
+// // with a delay of 0.5 seconds and a duration of 0.8 seconds.
 tl.from(".intro", {
-  y:50,
+  x:-150,
   opacity:0,
   delay:0.5,
   duration:0.8,
+  ease: "power3.inOut",
 })
 
-// following code was "adapted" from https://codepen.io/DariaIvK/pen/RwrBvaW
+// // following code was "adapted" (copied) from https://codepen.io/DariaIvK/pen/RwrBvaW
 
-// This code uses the ScrollTrigger library to create triggers for elements
-// with the classes "quality1" through "quality5". When the user scrolls between the top 60% an
-// d bottom 30% of the page, the elements will animate with GSAP, moving up and down and changing opacity.
-//  When the user scrolls back up, the elements will animate back to their original positions.
+// // This code uses the ScrollTrigger library to create triggers for elements
+// // with the classes "quality1" through "quality5". When the user scrolls between the top 60% an
+// // d bottom 30% of the page, the elements will animate with GSAP, moving up and down and changing opacity.
+// //  When the user scrolls back up, the elements will animate back to their original positions.
 ScrollTrigger.create({
   trigger: ".quality1",
   start: 'top 60%',
@@ -128,3 +156,6 @@ ScrollTrigger.create({
   onEnterBack: () => gsap.to(".quality5", {y: 0,opacity: 1,}),
   onLeaveBack: () => gsap.to(".quality5", {y: 50,opacity: 0,}),
 })
+
+
+
