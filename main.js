@@ -1,7 +1,6 @@
 var splitBenjamin = new SplitType(".benjamin")
 var splitKaiser = new SplitType(".kaiser")
 
-// const helloss = henskj
 // // This code registers the ScrollTrigger plugin with the GSAP library, allowing the user to create scroll-based animations with GSAP.
 gsap.registerPlugin("ScrollTrigger");
 // // This code creates a timeline object using the GreenSock Animation Platform (GSAP) library. The timeline object can be used to create and control animations.
@@ -46,48 +45,14 @@ tl.from(".mynameis", {
 }, "<")
 
 
-
-// // This code creates a timeline (tl) and animates the element with
-// // the class "benjamin" from an opacity of 0 to an opacity of 1, and from
-// // a vertical position of 100px to its original position, over a duration
-// // of 0.6 seconds, using a power3.inOut easing.
-// tl.from(".benjamin", {
-//   opacity:0,
-//   y:100,
-//   duration:0.6,
-//   ease: "power3.inOut",
-// })
-
-// // This code creates a timeline (tl) which animates the element with the class
-// // "kaiser" from an opacity of 0 to full opacity, moves it 100px up from its original positi
-// // on, and takes 0.6 seconds to complete the animation
-// // with a power3.inOut easing effect and a delay of 0.2 seconds.
-// tl.from(".kaiser", {
-//   opacity:0,
-//   y:100,
-//   duration:0.6,
-//   ease: "power3.inOut",
-//   delay:0.2,
-// })
-
-
-
+// This code uses the Timeline (tl) to animate the elements with the 
+// class "char" to a y-position of 0, staggering the animation by 
+// 0.05 seconds and taking a total duration of 0.1 seconds.
 tl.to(".char",{
   y:0,
   stagger:.05,
   duration:.1,
 })
-
-
-
-
-
-
-
-
-
-
-
 
 // // This code creates a timeline (tl) which animates the element wi
 // // th the class "intro" from a y-position of 50, an opacity of 0,
