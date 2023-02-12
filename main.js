@@ -3,26 +3,20 @@ gsap.registerPlugin(ScrollTrigger);
 // This code creates a timeline object using the GreenSock Animation Platform (GSAP) library. The timeline object can be used to create and control animations.
 var tl = gsap.timeline({});
 // This code sets the y position of the element with the id "li" to -50 and the scale to 0.75.
-tl.set("li",{
-  y:-50,
-  scale:0.75,
-})
+// tl.set("li",{
+//   y:-50,
+//   scale:0.75,
+// })
 
-// This code animates each "li" element to move up 1.5 units, with a
-//  staggered delay of 0.1 seconds between each element, using a power3.inOut easing effect.
-tl.to("li", {
-  y:1.5,
+
+// This code creates a timeline (tl) which animates each list item (li) from an x
+//  position of -3000 to its original position, with a staggered delay of 0.1
+//   seconds between each item, and an easing effect of "power3.inOut".
+tl.from("li", {
+  x:-3000,
   stagger:-0.1,
   ease: "power3.inOut",
 })
-// This code animates each list item ("li") to scale up to 1 with a 
-// staggered delay of 0.2 seconds between each item, using a power3.inOut easing effect.
-tl.to("li", {
-  scale:1,
-  stagger:-0.2,
-  ease: "power3.inOut",
-})
-
 
 // This code creates a timeline (tl) and animates the element with the class
 //  "me" from an x position of 1000 to its original position
