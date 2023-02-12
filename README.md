@@ -19,7 +19,7 @@ I am using GitHub to
  - Add some color to the 5 qualities section
  - Vertically align the image/definition of each quality
  - Add a footer to the bottom with some hidden stuff including the puzzle v2
- - Use GSAP ScrollTrigger to have them fade in on 
+ - ~~Use GSAP ScrollTrigger to have them fade in on~~
 
 ### Projects
 
