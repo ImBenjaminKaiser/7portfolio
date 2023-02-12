@@ -38,4 +38,4 @@ I am using GitHub to
  - make the page and add content
 
 # When?
-This will all be done by about 4 weeks from now (2/11/23)
+This will all be done by about 4 weeks from now (2/11/23) (i think)
