@@ -1,5 +1,6 @@
 var splitBenjamin = new SplitType(".benjamin")
 var splitKaiser = new SplitType(".kaiser")
+//making this a constant breaks the code idk why
 
 // // This code registers the ScrollTrigger plugin with the GSAP library, allowing the user to create scroll-based animations with GSAP.
 gsap.registerPlugin("ScrollTrigger");
@@ -19,12 +20,12 @@ tl.from("li", {
 // //  "me" from an x position of 1000 to its original position
 // //  over a duration of 2 seconds using a power3.inOut easing.
 tl.from(".me",{
-  y:1000,
+  y:300,
   opacity:0,
   duration:2,
   ease: "power3.inOut",
   // scale:0.5,
-})
+}, ">")
 
 // // This code creates an animation that moves the element with the class
 // // "hellomynameis" from its current position to a position 100px above it, fades
@@ -33,16 +34,16 @@ tl.from(".hello", {
   y:-100,
   opacity:0,
   scale:0,
-  delay:0.5,
+  // delay:0.5,
   duration:0.6,
 })
 tl.from(".mynameis", {
   y:-100,
   opacity:0,
   scale:0,
-  delay:0.5,
+  // delay:0.5,
   duration:0.6,
-}, "<")
+},)
 
 
 // This code uses the Timeline (tl) to animate the elements with the 
@@ -51,7 +52,8 @@ tl.from(".mynameis", {
 tl.to(".char",{
   y:0,
   stagger:.05,
-  duration:.1,
+  duration:.3,
+  ease: "back.out(1.7)",
 })
 
 // // This code creates a timeline (tl) which animates the element wi
@@ -74,7 +76,7 @@ tl.from(".intro", {
 ScrollTrigger.create({
   trigger: ".quality1",
   start: 'top 60%',
-  end: 'bottom 30%',
+  end: 'bottom 20%',
   // markers: true,
   onEnter: () => gsap.to(".quality1", {y: 0,opacity: 1,}),
   onLeave: () => gsap.to(".quality1", {y: -50,opacity: 0,}),
@@ -84,7 +86,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: ".quality2",
   start: 'top 60%',
-  end: 'bottom 30%',
+  end: 'bottom 20%',
   // markers: true,
   onEnter: () => gsap.to(".quality2", {y: 0,opacity: 1,}),
   onLeave: () => gsap.to(".quality2", {y: -50,opacity: 0,}),
@@ -94,7 +96,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: ".quality3",
   start: 'top 60%',
-  end: 'bottom 30%',
+  end: 'bottom 20%',
   // markers: true,
   onEnter: () => gsap.to(".quality3", {y: 0,opacity: 1,}),
   onLeave: () => gsap.to(".quality3", {y: -50,opacity: 0,}),
@@ -104,7 +106,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: ".quality4",
   start: 'top 60%',
-  end: 'bottom 30%',
+  end: 'bottom 20%',
   // markers: true,
   onEnter: () => gsap.to(".quality4", {y: 0,opacity: 1,}),
   onLeave: () => gsap.to(".quality4", {y: -50,opacity: 0,}),
@@ -114,7 +116,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: ".quality5",
   start: 'top 60%',
-  end: 'bottom 30%',
+  end: 'bottom 20%',
   // markers: true,
   onEnter: () => gsap.to(".quality5", {y: 0,opacity: 1,}),
   onLeave: () => gsap.to(".quality5", {y: -50,opacity: 0,}),
