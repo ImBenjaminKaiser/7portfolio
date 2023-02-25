@@ -5,7 +5,7 @@
   --dullpeach45: #e0ab9f;
   --dullpeach65: #d4b2ab;
   --dullpeach80: #cbb8b4;
-  --grey: #414141;
+  --grey: rgb(65, 65, 65);
   --darkgrey: #313131;
   --orangeyellow: rgba(253, 195, 45, 1);
   --babyblue: #85e5fa;
@@ -14,6 +14,7 @@
   --green: #007d69;
   --yellow: #f7d117;
   --red: #e71e39;
+  --dimgrey: #696969; /*lmao nice*/
 }
 /* sets the font of everything to the one I Imported */
 * {
@@ -81,12 +82,13 @@ body {
 .benjamin,
 .kaiser {
   font-size: 5vw;
-  color: var(--orangeyellow);
+  /* color: var(--orangeyellow); */
+  /* color: #ffffff; */
 }
 .benjaminkaiser {
   font-weight: bold;
   float: left;
-  color: aliceblue;
+  color: rgb(240, 248, 255);
   margin: 6vw 6vw 0px 6vw;
   width: 80%;
 }
@@ -210,9 +212,10 @@ body {
 .hello,
 .mynameis {
   display: inline-block;
+  /* color: rgba(0, 0, 0, 0); */
 }
 
-.char {
+/* .char {
   transform: translateY(115px);
   -webkit-transform: translateY(115px);
   -moz-transform: translateY(115px);
@@ -223,10 +226,13 @@ body {
   -moz-transition: transform 0.5s;
   -ms-transition: transform 0.5s;
   -o-transition: transform 0.5s;
-}
+} */
 .benjamin,
 .kaiser {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  /* -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 .blue {
   color: var(--blue);
@@ -275,13 +281,13 @@ body {
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;
   border-radius: 35px;
-  /* display: none; */
   -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   z-index: 5;
+  -webkit-transition: all 0.4s ease;
 }
 #return-to-top i {
   color: #fff;
@@ -297,16 +303,23 @@ body {
   transition: all 0.3s ease;
 }
 #return-to-top:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: linear-gradient(90deg, #ff0f7b 0%, #f89c2a 100%);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
 }
 #return-to-top:hover i {
   color: #fff;
   top: 5px;
 }
 #top {
-  /* display: none; */
   position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: red;
+}
+.char {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.underline {
+  color: var(--peach);
 }

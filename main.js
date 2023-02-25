@@ -6,6 +6,10 @@ var splitKaiser = new SplitType(".kaiser")
 gsap.registerPlugin("ScrollTrigger");
 // // This code creates a timeline object using the GreenSock Animation Platform (GSAP) library. The timeline object can be used to create and control animations.
 var tl = gsap.timeline({});
+tl.set(".char",{
+y:-100,
+backgroundImage: "lineargradient( 90, rgb(245, 92, 123), rgb(255, 37, 139))",
+})
 
 // // This code creates a timeline (tl) which animates each list item (li) from an x
 // //  position of -3000 to its original position, with a staggered delay of 0.1
@@ -51,10 +55,9 @@ tl.from(".mynameis", {
 // 0.05 seconds and taking a total duration of 0.1 seconds.
 tl.to(".char",{
   y:0,
-  stagger:.05,
-  duration:.3,
-  ease: "back.out(1.7)",
+  stagger:0.05,
 })
+
 
 // // This code creates a timeline (tl) which animates the element wi
 // // th the class "intro" from a y-position of 50, an opacity of 0,
