@@ -321,5 +321,18 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 .underline {
+  padding: 10px 15px;
+  text-decoration: underline; /*no text styling*/
+  font-weight: bold; /*<strong> tag wasn't working so this makes it bold*/
+  transition: all 0.2s;
+  text-align: center;
+  font-size: 30px;
   color: var(--peach);
+  cursor: pointer;
+}
+
+.underline:hover {
+  background-color: var(--peach);
+  color: var(--grey);
+  border-radius: 3px;
 }
