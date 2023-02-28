@@ -1,28 +1,105 @@
+
+gsap.registerPlugin("ScrollTrigger");
 var splitBenjamin = new SplitType(".benjamin")
 var splitKaiser = new SplitType(".kaiser")
 //making this a constant breaks the code idk why
+//random speeds for homepage
+var randDur1 = gsap.utils.random(15,25)
+var randDur2 = gsap.utils.random(26, 35)
+var randDur3 = gsap.utils.random(36, 45)
+var randDur4 = gsap.utils.random(46, 55)
+var randDur5 = gsap.utils.random(56, 90)
+//random speeds for coding speeds
+var randDur1c = gsap.utils.random(15,25)
+var randDur2c = gsap.utils.random(26, 35)
+var randDur3c = gsap.utils.random(36, 45)
+var randDur4c = gsap.utils.random(46, 55)
+var randDur5c = gsap.utils.random(56, 90)
 
-// // This code registers the ScrollTrigger plugin with the GSAP library, allowing the user to create scroll-based animations with GSAP.
-gsap.registerPlugin("ScrollTrigger");
-// // This code creates a timeline object using the GreenSock Animation Platform (GSAP) library. The timeline object can be used to create and control animations.
 var tl = gsap.timeline({});
-tl.set(".char",{
-y:-100,
-backgroundImage: "lineargradient( 90, rgb(245, 92, 123), rgb(255, 37, 139))",
+tl.set(".char",{y:-100,})
+
+//for homepage 
+gsap.to("#wave1",{
+  x:-2600,
+  duration:randDur1,
+  yoyo:true,
+  repeat:-1,
+  ease:"none",
+})
+gsap.to("#wave2",{
+  x:-2600,
+  duration:randDur2,
+  yoyo:true,
+  repeat:-1,
+  ease:"none",
+})
+gsap.to("#wave3",{
+  x:-2600,
+  duration:randDur3,
+  yoyo:true,
+  repeat:-1,
+  ease:"none",
+})
+gsap.to("#wave4",{
+  x:-2600,
+  duration:randDur4,
+  yoyo:true,
+  repeat:-1,
+  ease:"none",
+})
+gsap.to("#wave5",{
+  x:-2600,
+  duration:randDur5,
+  yoyo:true,
+  repeat:-1,
+  ease:"none",
+})
+//🚧🚧🚧 Under Construction 🚧🚧🚧
+// for coding progression
+gsap.to("#wave1c",{
+  x:-2600,
+  duration:randDur1c,
+  yoyo:true,
+  repeat:-1,
+  ease:"none",
+})
+gsap.to("#wave2c",{
+  x:-2600,
+  duration:randDur2c,
+  yoyo:true,
+  repeat:-1,
+  ease:"none",
+})
+gsap.to("#wave3c",{
+  x:-2600,
+  duration:randDur3c,
+  yoyo:true,
+  repeat:-1,
+  ease:"none",
+})
+gsap.to("#wave4c",{
+  x:-2600,
+  duration:randDur4c,
+  yoyo:true,
+  repeat:-1,
+  ease:"none",
+})
+gsap.to("#wave5c",{
+  x:-2600,
+  duration:randDur5c,
+  yoyo:true,
+  repeat:-1,
+  ease:"none",
 })
 
-// // This code creates a timeline (tl) which animates each list item (li) from an x
-// //  position of -3000 to its original position, with a staggered delay of 0.1
-// //   seconds between each item, and an easing effect of "power3.inOut".
-tl.from("li", {
+
+tl.from(".nav-link", {
   x:-3000,
   stagger:-0.1,
   ease: "power3.inOut",
 })
 
-// // This code creates a timeline (tl) and animates the element with the class
-// //  "me" from an x position of 1000 to its original position
-// //  over a duration of 2 seconds using a power3.inOut easing.
 tl.from(".me",{
   y:300,
   opacity:0,
@@ -31,9 +108,7 @@ tl.from(".me",{
   // scale:0.5,
 }, ">")
 
-// // This code creates an animation that moves the element with the class
-// // "hellomynameis" from its current position to a position 100px above it, fades
-// //  it in, and scales it up, all over a duration of 0.6 seconds, with a delay of 0.5 seconds.
+
 tl.from(".hello", {
   y:-100,
   opacity:0,
@@ -49,19 +124,11 @@ tl.from(".mynameis", {
   duration:0.6,
 },)
 
-
-// This code uses the Timeline (tl) to animate the elements with the 
-// class "char" to a y-position of 0, staggering the animation by 
-// 0.05 seconds and taking a total duration of 0.1 seconds.
 tl.to(".char",{
   y:0,
   stagger:0.05,
 })
 
-
-// // This code creates a timeline (tl) which animates the element wi
-// // th the class "intro" from a y-position of 50, an opacity of 0,
-// // with a delay of 0.5 seconds and a duration of 0.8 seconds.
 tl.from(".intro", {
   x:-150,
   opacity:0,
@@ -70,12 +137,7 @@ tl.from(".intro", {
   ease: "power3.inOut",
 })
 
-// // following code was "adapted" (copied) from https://codepen.io/DariaIvK/pen/RwrBvaW
-
-// // This code uses the ScrollTrigger library to create triggers for elements
-// // with the classes "quality1" through "quality5". When the user scrolls between the top 60% an
-// // d bottom 30% of the page, the elements will animate with GSAP, moving up and down and changing opacity.
-// //  When the user scrolls back up, the elements will animate back to their original positions.
+// following code was "adapted" (copied) from https://codepen.io/DariaIvK/pen/RwrBvaW
 ScrollTrigger.create({
   trigger: ".quality1",
   start: 'top 60%',
@@ -126,6 +188,12 @@ ScrollTrigger.create({
   onEnterBack: () => gsap.to(".quality5", {y: 0,opacity: 1,}),
   onLeaveBack: () => gsap.to(".quality5", {y: 50,opacity: 0,}),
 })
-
-
-
+// from here https://stackoverflow.com/questions/32679960/want-to-change-fonts-back-and-forth-using-javascript-button
+function changeFont() {
+  var fon = document.getElementById("changeable");
+  if (fon.className == "raleway") {
+    fon.className = 'openDyslexic';
+  } else {
+    fon.className = 'raleway';
+  }
+}
