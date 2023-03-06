@@ -1,31 +1,27 @@
-
-gsap.registerPlugin("ScrollTrigger");
-var splitBenjamin = new SplitType(".benjamin")
-var splitKaiser = new SplitType(".kaiser")
+//Learned from GSAP Docs and GSAP forums: https://greensock.com/docs/ and https://greensock.com/forums/
+gsap.registerPlugin("ScrollTrigger");//registers ScrollTrigger plugin
+var splitBenjamin = new SplitType(".benjamin", { types: 'chars' })//splits the element into spans of single letters
+var splitIntro = new SplitType(".intro", { types: 'words' })//splits the paragraph into spans of words
 //making this a constant breaks the code idk why
 //random speeds for homepage
-var randDur1 = gsap.utils.random(15,25)
+var randDur1 = gsap.utils.random(15,25)//random number betwween 15 and 25
 var randDur2 = gsap.utils.random(26, 35)
 var randDur3 = gsap.utils.random(36, 45)
 var randDur4 = gsap.utils.random(46, 55)
 var randDur5 = gsap.utils.random(56, 90)
-//random speeds for coding speeds
-var randDur1c = gsap.utils.random(15,25)
-var randDur2c = gsap.utils.random(26, 35)
-var randDur3c = gsap.utils.random(36, 45)
-var randDur4c = gsap.utils.random(46, 55)
-var randDur5c = gsap.utils.random(56, 90)
 
-var tl = gsap.timeline({});
-tl.set(".char",{y:-100,})
+var tl = gsap.timeline({});//makes it easier to type
+tl.set(".char",{y:-100,})//moves the .char spans up 100px
 
 //for homepage 
+//makes waves go back and forth with random speed
 gsap.to("#wave1",{
   x:-2600,
-  duration:randDur1,
-  yoyo:true,
-  repeat:-1,
+  duration:randDur1,//sets the speed (duration) to a random number from 15-25
+  yoyo:true,//if true the ABBA, if false then ABAB
+  repeat:-1,//loop forever
   ease:"none",
+  
 })
 gsap.to("#wave2",{
   x:-2600,
@@ -55,98 +51,54 @@ gsap.to("#wave5",{
   repeat:-1,
   ease:"none",
 })
-//🚧🚧🚧 Under Construction 🚧🚧🚧
-// for coding progression
-gsap.to("#wave1c",{
-  x:-2600,
-  duration:randDur1c,
-  yoyo:true,
-  repeat:-1,
-  ease:"none",
-})
-gsap.to("#wave2c",{
-  x:-2600,
-  duration:randDur2c,
-  yoyo:true,
-  repeat:-1,
-  ease:"none",
-})
-gsap.to("#wave3c",{
-  x:-2600,
-  duration:randDur3c,
-  yoyo:true,
-  repeat:-1,
-  ease:"none",
-})
-gsap.to("#wave4c",{
-  x:-2600,
-  duration:randDur4c,
-  yoyo:true,
-  repeat:-1,
-  ease:"none",
-})
-gsap.to("#wave5c",{
-  x:-2600,
-  duration:randDur5c,
-  yoyo:true,
-  repeat:-1,
-  ease:"none",
-})
-
-
-tl.from(".nav-link", {
-  x:-3000,
-  stagger:-0.1,
-  ease: "power3.inOut",
-})
-
-tl.from(".me",{
-  y:300,
-  opacity:0,
-  duration:2,
-  ease: "power3.inOut",
-  // scale:0.5,
-}, ">")
-
-
+//tl makes so they animate in order
 tl.from(".hello", {
-  y:-100,
-  opacity:0,
-  scale:0,
-  // delay:0.5,
-  duration:0.6,
+  x:-220,
+  delay:0.5,//wait 0.5s before animating
+  ease: "back.out(3)"
 })
 tl.from(".mynameis", {
-  y:-100,
-  opacity:0,
-  scale:0,
-  // delay:0.5,
-  duration:0.6,
-},)
+  x:-220,
+  ease: "back.out(3)"
+},"<")//"<"" means start at last animation 
 
 tl.to(".char",{
   y:0,
-  stagger:0.05,
+  stagger:0.05,//like a mini timeline, delay in seconds
+  delay:-0.2,
 })
+gsap.set(".me",{//sets a position
+  x:700
+})
+tl.to(".me",{
+  x:0,
+  ease: "power4.out",
+  duration:2,
+}, "<")
 
-tl.from(".intro", {
-  x:-150,
+tl.from(".word", {
   opacity:0,
-  delay:0.5,
-  duration:0.8,
+  delay:-1,
+  stagger: {//random order stagger
+    from: "random",
+    amount: 0.5,
+  },
   ease: "power3.inOut",
 })
 
+
+
 // following code was "adapted" (copied) from https://codepen.io/DariaIvK/pen/RwrBvaW
 ScrollTrigger.create({
-  trigger: ".quality1",
+  trigger: ".quality1",//what causes the animation
   start: 'top 60%',
   end: 'bottom 20%',
   // markers: true,
-  onEnter: () => gsap.to(".quality1", {y: 0,opacity: 1,}),
-  onLeave: () => gsap.to(".quality1", {y: -50,opacity: 0,}),
-  onEnterBack: () => gsap.to(".quality1", {y: 0,opacity: 1,}),
-  onLeaveBack: () => gsap.to(".quality1", {y: 50,opacity: 0,}),
+  //uncomment prevoious line to see how it works
+  onEnter: () => gsap.to(".quality1", {y: 0,opacity: 1,}),//animation on enter
+  onLeave: () => gsap.to(".quality1", {y: -50,opacity: 0,}),//animation on leave
+  onEnterBack: () => gsap.to(".quality1", {y: 0,opacity: 1,}),//animation on re-enter
+  onLeaveBack: () => gsap.to(".quality1", {y: 50,opacity: 0,}),//animation on re-leave
 })
 ScrollTrigger.create({
   trigger: ".quality2",
@@ -190,10 +142,11 @@ ScrollTrigger.create({
 })
 // from here https://stackoverflow.com/questions/32679960/want-to-change-fonts-back-and-forth-using-javascript-button
 function changeFont() {
-  var fon = document.getElementById("changeable");
-  if (fon.className == "raleway") {
-    fon.className = 'openDyslexic';
-  } else {
-    fon.className = 'raleway';
+  var fon = document.getElementById("changeable");//shorten document.getElementById("changeable") to fon
+  if (fon.className == "raleway") { //if changeable element has a class of raleway 
+    fon.className = 'openDyslexic'; //change class to openDyslexic
+  } else {                          //if not
+    fon.className = 'raleway';      //change to raleway
   }
 }
+

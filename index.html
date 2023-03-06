@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!-- I can now make a website with positioning and images -->
+<!-- I can now properly use divs to style content -->
+<!-- I now know how to make and style a navbars -->
 <html lang="en">
   <head>
     <title>Benjamin Kaiser's Homepage</title>
@@ -14,7 +17,7 @@
     <meta name="copyright" content="2023, Dayton Regional STEM School" />
     <meta name="rating" content="general" />
   </head>
-  <body class="raleway" id="changeable">
+  <body class="raleway" id="changeable" class="home-body">
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
@@ -62,7 +65,12 @@
       .
     </p>
 
-    <img class="me" src="img/me.png" alt="A picture of me" />
+    <img
+      class="me"
+      src="img/me.png"
+      alt="A picture of me"
+      width="512"
+      height="auto" />
     <div class="qualities">
       <h1 class="thefivequalities">The Five Qualities</h1>
       <div class="quality1">
@@ -120,7 +128,7 @@
       </div>
     </div>
 
-    <!-- inspired/adapted by this codepen https://codepen.io/alvarotrigo/pen/GRxxWdQ -->
+    <!-- inspired by this codepen https://codepen.io/alvarotrigo/pen/GRxxWdQ -->
     <footer class="footer">
       <div class="waves">
         <div class="wave" id="wave1"></div>
@@ -135,9 +143,9 @@
         <p class="footer-links">
           <a href="#top">Home</a> •<a href="projects.html"> Projects</a>
           •
-          <a href="coding.html">Coding Progression</a>
-          •
           <a href="experiences.html"> Experiences</a>
+          •
+          <a href="coding.html">Coding Progression</a>
         </p>
         <p class="copy">
           This work is licensed under CC BY-NC 4.0 |
@@ -154,6 +162,7 @@
             target="_blank"
             >View Source Code</a
           >
+          <a href="puzzle.html" class="puzzle"> | Super secret puzzle</a>
         </p>
         <!-- from here https://stackoverflow.com/questions/32679960/want-to-change-fonts-back-and-forth-using-javascript-button -->
         <input
